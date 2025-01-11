@@ -5,14 +5,27 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.2</version>
+		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.luv2code.springboot.demo</groupId>
+	<groupId>com.springboot.demo</groupId>
 	<artifactId>mycoolapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mycoolapp</name>
-	<description>Demonstration project for Spring Boot</description>
+	<description>Demo project for Spring Boot</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -20,12 +33,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<version>3.3.2</version>
 		</dependency>
 
 		<dependency>
@@ -43,6 +50,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
+<!-- For running the current application through above plugin; use the following command:-->
+<!-- mvn spring-boot:run -->
 </project>
