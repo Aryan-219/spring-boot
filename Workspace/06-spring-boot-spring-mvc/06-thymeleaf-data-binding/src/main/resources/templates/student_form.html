@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form th:action="@{/processed_form}" th:object="${student}" method="POST">
+      <input type="text" th:field="*{name}" />
+      <input type="number" th:field="*{age}" />
+      <select th:field="*{country}">
+        <option th:value="India">India</option>
+        <option th:value="Brazil">Brazil</option>
+        <option th:value="Canada">Canada</option>
+        <option th:value="New+' '+ Zealand">New Zealand</option>
+      </select>
+      <input type="submit" />
+    </form>
+  </body>
+</html>

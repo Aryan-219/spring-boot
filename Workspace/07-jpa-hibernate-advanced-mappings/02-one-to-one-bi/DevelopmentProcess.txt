@@ -1,0 +1,5 @@
+1. Make updates to the instructor detail class.
+    a. Add new field to reference instructor.
+    b. Add getter/setter for instructor.
+    c. Add @OneToOne annotation.
+2. Create main app.

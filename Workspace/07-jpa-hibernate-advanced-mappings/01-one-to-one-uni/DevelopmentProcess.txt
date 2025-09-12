@@ -1,0 +1,4 @@
+1. Create the database tables : instructor and instructor detail
+2. Create the Instructor detail class
+3. Create the Instructor class
+4. Create the spring boot command line app

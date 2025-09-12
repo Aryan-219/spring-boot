@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11e94060-43e9-4d0c-8f77-0d9c53ef8712" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../04-spring-boot-rest-crud/08-spring-boot-rest-crud-employee-refactored-service-layer/src/main/java/com/luv2code/springboot/cruddemo/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../04-spring-boot-rest-crud/08-spring-boot-rest-crud-employee-refactored-service-layer/src/main/java/com/luv2code/springboot/cruddemo/service/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05-spring-boot-rest-security/01-spring-boot-rest-security-configuration/src/main/java/com/luv2code/springboot/cruddemo/security/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/01-thymeleaf-helloworld/src/main/java/com/springboot/thymeleaf/controllers/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/01-thymeleaf-helloworld/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/01-thymeleaf-helloworld/src/main/resources/templates/helloworld.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/08-thymeleaf-validation/src/main/java/com/springmvc/validation/CourseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/08-thymeleaf-validation/src/main/java/com/springmvc/validation/CourseCodeConstraintValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/08-thymeleaf-validation/src/main/java/com/springmvc/validation/controllers/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/08-thymeleaf-validation/src/main/java/com/springmvc/validation/models/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/08-thymeleaf-validation/src/main/resources/message.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/08-thymeleaf-validation/src/main/resources/templates/customer_confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../06-spring-boot-spring-mvc/08-thymeleaf-validation/src/main/resources/templates/customer_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-one-to-one-uni/src/main/java/com/mappings/jpa/dao/AppDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-one-to-one-uni/src/main/java/com/mappings/jpa/dao/AppDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-one-to-one-uni/src/main/java/com/mappings/jpa/entity/Instructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01-one-to-one-uni/src/main/java/com/mappings/jpa/entity/InstructorDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03-spring-boot-hibernate-jpa-crud/00-starter-sql-scripts/01-create-user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../03-spring-boot-hibernate-jpa-crud/00-starter-sql-scripts/01-create-user.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="31jSUazlminbDAO5VyeWUoQrNDQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.JpaApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Programming/spring boot/Workspace/07-jpa-hibernate-advanced-mappings/03-one-to-many",
+    "settings.editor.selected.configurable": "preferences.editor"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="03-one-to-many" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="02-one-to-one-bi" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11e94060-43e9-4d0c-8f77-0d9c53ef8712" name="Changes" comment="" />
+      <created>1756036006472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756036006472</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+
+<br/>
+name : <span th:text="${student.name}"/>
+age : <span th:text="${student.age}"/>
+age : <span th:text="${student.country}"/>
+language : <span th:text="${student.programmingLanguage}"/>
+operating System: <span th:each="operating:${student.operatingSystem}" th:text="${operating}"/>
+</body>
+</html>
