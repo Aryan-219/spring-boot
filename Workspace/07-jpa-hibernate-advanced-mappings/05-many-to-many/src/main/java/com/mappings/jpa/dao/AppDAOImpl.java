@@ -3,6 +3,7 @@ package com.mappings.jpa.dao;
 import com.mappings.jpa.entity.Course;
 import com.mappings.jpa.entity.Instructor;
 import com.mappings.jpa.entity.InstructorDetail;
+import com.mappings.jpa.entity.Student;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -120,16 +121,62 @@ public class AppDAOImpl implements AppDAO {
     public Course findCourseAndReviewsByCourseId(int theId) {
 
         // create query
-        TypedQuery<Course> query = entityManager.createQuery(
-                "select c from Course c "
-                + "JOIN FETCH c.reviews "
-                + "where c.id = :data", Course.class
-        );
+        TypedQuery<Course> query = entityManager.createQuery("select c from Course c " + "JOIN FETCH c.reviews " + "where c.id = :data", Course.class);
         query.setParameter("data", theId);
 
         // execute query
         Course course = query.getSingleResult();
 
         return course;
+    }
+
+    @Override
+    public Course findCourseAndStudentsByCourseId(int theId) {
+
+        // create query
+        TypedQuery<Course> query = entityManager.createQuery("select c from Course c " + "JOIN FETCH c.students " + "where c.id = :data", Course.class);
+        query.setParameter("data", theId);
+
+        // execute query
+        Course course = query.getSingleResult();
+
+        return course;
+    }
+
+    @Override
+    public Student findStudentAndCourseByStudentId(int theId) {
+
+        // create query
+        TypedQuery<Student> query = entityManager.createQuery("select s from Student s " + "JOIN FETCH s.courses " + "where s.id = :data", Student.class);
+        query.setParameter("data", theId);
+
+        // execute query
+        Student student = query.getSingleResult();
+
+        return student;
+
+    }
+
+    @Override
+    @Transactional
+    public void update(Student tempStudent) {
+        entityManager.merge(tempStudent);
+    }
+
+    @Override
+    @Transactional
+    public void deleteStudentById(int theId) {
+        // retrieve the student
+        Student tempStudent = entityManager.find(Student.class, theId);
+
+        if (tempStudent != null) {
+            List<Course> courses = tempStudent.getCourses();
+
+            for (Course course : courses) {
+                course.getStudents().remove(tempStudent);
+            }
+        }
+        // delete the student
+        entityManager.remove(tempStudent);
     }
 }

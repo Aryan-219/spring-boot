@@ -1,10 +1,7 @@
 package com.mappings.jpa;
 
 import com.mappings.jpa.dao.AppDAO;
-import com.mappings.jpa.entity.Course;
-import com.mappings.jpa.entity.Instructor;
-import com.mappings.jpa.entity.InstructorDetail;
-import com.mappings.jpa.entity.Review;
+import com.mappings.jpa.entity.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,11 +20,15 @@ public class JpaApplication {
     public CommandLineRunner commandLineRunner(AppDAO appDAO) {
         return runner -> {
             // System.out.println("Hello World !");
+
+            // One to One methods
             // createInstructor(appDAO);
             // findInstructor(appDAO);
             // deleteInstructor(appDAO);
             // findInstructorDetail(appDAO);
             // deleteInstructorDetail(appDAO);
+
+            // One to many / Many to one methods
             // createInstructorWithCourses(appDAO);
             // findInstructorWithCourses(appDAO);
             // findCoursesForInstructor(appDAO);
@@ -37,8 +38,83 @@ public class JpaApplication {
             // deleteCourse(appDAO);
             // createCourseAndReviews(appDAO);
             // retreiveCourseAndReviews(appDAO);
-            deleteCourseAndReviews(appDAO);
+            // deleteCourseAndReviews(appDAO);
+
+            // Many to many methods
+            // createCourseAndStudents(appDAO);
+            // findCourseAndStudents(appDAO);
+            // findStudentAndCourses(appDAO);
+            // addMoreCoursesForStudent(appDAO);
+            // deleteCourse(appDAO);
+            deleteStudent(appDAO);
         };
+    }
+
+    private void deleteStudent(AppDAO appDAO) {
+        int theId = 2;
+        System.out.println("Deleting student with id: " + theId);
+        appDAO.deleteStudentById(theId);
+        System.out.println("Done");
+    }
+
+    private void addMoreCoursesForStudent(AppDAO appDAO) {
+        int theId = 2;
+        Student tempStudent = appDAO.findStudentAndCourseByStudentId(theId);
+
+//      // create more courses
+        Course tempCourse1 = new Course("Rubix Cube - How to speed cube");
+        Course tempCourse2 = new Course("Atari 26 - Game dev");
+
+        // add course to student
+        tempStudent.add(tempCourse1);
+        tempStudent.add(tempCourse2);
+
+        System.out.println("Updating student " + tempStudent);
+        System.out.println("Associated courses: " + tempStudent.getCourses());
+
+        appDAO.update(tempStudent);
+
+        System.out.println("Done!");
+    }
+
+    private void findStudentAndCourses(AppDAO appDAO) {
+        int theId = 2;
+        Student tempStudent = appDAO.findStudentAndCourseByStudentId(theId);
+
+        System.out.println("Loaded students: " + tempStudent);
+        System.out.println("Associated courses: " + tempStudent.getCourses());
+
+        System.out.println("Done!");
+    }
+
+    private void findCourseAndStudents(AppDAO appDAO) {
+        int theId = 10;
+        Course tempCourse = appDAO.findCourseAndStudentsByCourseId(theId);
+
+        System.out.println("Loaded course: " + tempCourse);
+        System.out.println("Students: " + tempCourse.getStudents());
+
+        System.out.println("Done!");
+    }
+
+    private void createCourseAndStudents(AppDAO appDAO) {
+
+        // create a course
+        Course tempCourse = new Course("Pacman - How to score a million points");
+
+        // create the students
+        Student tempStudent1 = new Student("John", "Doe", "john@luv2code.com");
+        Student tempStudent2 = new Student("Mary", "Public", "mary@luv2code.com");
+
+        // add students to the course
+        tempCourse.add(tempStudent1);
+        tempCourse.add(tempStudent2);
+
+        // save the course and associated students
+        System.out.println("Saving the course: " + tempCourse);
+        System.out.println("associated students: " + tempCourse.getStudents());
+        appDAO.save(tempCourse);
+        System.out.println("Done!");
     }
 
     private void deleteCourseAndReviews(AppDAO appDAO) {
@@ -83,7 +159,7 @@ public class JpaApplication {
     }
 
     private void deleteCourse(AppDAO appDAO) {
-        int theId = 10;
+        int theId = 11;
         System.out.println("Deleting course with id: " + theId);
         appDAO.deleteCourseById(theId);
         System.out.println("Done");
